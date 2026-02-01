@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 30px;
+            background-color: #f9f9f9;
+        }
+        .header {
+            background-color: #0066cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px 5px 0 0;
+            margin: -30px -30px 20px -30px;
+        }
+        .details-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .details-table td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .details-table td:first-child {
+            font-weight: bold;
+            width: 40%;
+        }
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Event Registration Confirmation</h1>
+        </div>
+        
+        <p>Dear {{ full_name }},</p>
+        
+        <p>Thank you for registering for our event. Your registration has been confirmed successfully.</p>
+        
+        <h2 style="color: #0066cc;">Registration Details:</h2>
+        
+        <table class="details-table">
+            <tr>
+                <td>Name:</td>
+                <td>{{ full_name }}</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>{{ email }}</td>
+            </tr>
+            <tr>
+                <td>Event Name:</td>
+                <td>{{ event_name }}</td>
+            </tr>
+            <tr>
+                <td>Category:</td>
+                <td>{{ event_category }}</td>
+            </tr>
+            <tr>
+                <td>Event Date:</td>
+                <td>{{ event_date }}</td>
+            </tr>
+            <tr>
+                <td>College:</td>
+                <td>{{ college_name }}</td>
+            </tr>
+            <tr>
+                <td>Department:</td>
+                <td>{{ department }}</td>
+            </tr>
+            <tr>
+                <td>Registration Date:</td>
+                <td>{{ registration_date|date:"F d, Y H:i" }}</td>
+            </tr>
+        </table>
+        
+        <p>We look forward to seeing you at the event!</p>
+        
+        <p>If you have any questions, please don't hesitate to contact us.</p>
+        
+        <div class="footer">
+            <p>Best regards,<br>Event Management Team</p>
+            <p style="font-size: 12px; color: #999;">This is an automated email. Please do not reply.</p>
+        </div>
+    </div>
+</body>
+</html>
