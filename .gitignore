@@ -1,0 +1,90 @@
+# Gitignore for Event Registration Drupal Project
+
+# Ignore Drupal core
+/core
+
+# Ignore vendor (installed via composer)
+/vendor
+
+# Ignore sites folder (contains sensitive data)
+/sites
+
+# Ignore themes and profiles
+/themes
+/profiles
+
+# Ignore contributed modules
+/modules/contrib
+
+# Ignore common Drupal files
+/autoload.php
+/index.php
+/update.php
+/robots.txt
+/web.config
+/.htaccess
+/.ht.router.php
+
+# Ignore development files
+/.editorconfig
+/.eslintignore
+/.eslintrc.json
+/.csslintrc
+/.gitattributes
+
+# Ignore Drupal installation files
+/INSTALL.txt
+/LICENSE.txt
+/example.gitignore
+
+# Ignore extra documentation files in root
+/ARCHITECTURE.md
+/FRONTEND_GUIDE.md
+/MODULE_SUMMARY.md
+/QUICKSTART_CHECKLIST.md
+/SETUP_GUIDE.md
+/XAMPP_INSTALLATION_GUIDE.md
+/database.settings.example.php
+
+# Ignore duplicate module files in root
+/event_registration.info.yml
+/event_registration.module
+/event_registration.install
+/event_registration.routing.yml
+/event_registration.permissions.yml
+/event_registration.services.yml
+/event_registration.libraries.yml
+/src
+/config
+/css
+/js
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Ignore temporary files
+*.log
+*.tmp
+*.bak
+*.cache
+
+# Ignore database dumps (except our schema file)
+*.sql
+!modules/custom/event_registration/event_registration.sql
+
+# Ignore environment files
+.env
+.env.local
+
+# Keep important files
+!composer.json
+!composer.lock
+!modules/custom/event_registration/**
+!README.md
+!.gitignore
