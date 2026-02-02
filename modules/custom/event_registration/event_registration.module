@@ -1,0 +1,62 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for event_registration module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function event_registration_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.event_registration':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Custom module for event registration with email notifications and admin management.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_mail().
+ */
+function event_registration_mail($key, &$message, $params) {
+  switch ($key) {
+    case 'user_confirmation':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('Event Registration Confirmation');
+      $message['body'][] = t('Dear @name,', ['@name' => $params['full_name']]);
+      $message['body'][] = '';
+      $message['body'][] = t('Thank you for registering for our event!');
+      $message['body'][] = '';
+      $message['body'][] = t('Registration Details:');
+      $message['body'][] = t('Event Name: @event_name', ['@event_name' => $params['event_name']]);
+      $message['body'][] = t('Category: @category', ['@category' => $params['category']]);
+      $message['body'][] = t('Event Date: @event_date', ['@event_date' => $params['event_date']]);
+      $message['body'][] = '';
+      $message['body'][] = t('We look forward to seeing you at the event!');
+      break;
+
+    case 'admin_notification':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('New Event Registration');
+      $message['body'][] = t('A new event registration has been submitted:');
+      $message['body'][] = '';
+      $message['body'][] = t('Registrant Details:');
+      $message['body'][] = t('Name: @name', ['@name' => $params['full_name']]);
+      $message['body'][] = t('Email: @email', ['@email' => $params['email']]);
+      $message['body'][] = t('College: @college', ['@college' => $params['college_name']]);
+      $message['body'][] = t('Department: @department', ['@department' => $params['department']]);
+      $message['body'][] = '';
+      $message['body'][] = t('Event Details:');
+      $message['body'][] = t('Event Name: @event_name', ['@event_name' => $params['event_name']]);
+      $message['body'][] = t('Category: @category', ['@category' => $params['category']]);
+      $message['body'][] = t('Event Date: @event_date', ['@event_date' => $params['event_date']]);
+      break;
+  }
+}
