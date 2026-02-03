@@ -1,0 +1,16 @@
+# XAMPP Installation Guide (Windows)
+
+1. Go to *https://sourceforge.net/projects/xampp* or [**Click Here**](https://sourceforge.net/projects/xampp/).
+2. Click on the *`Download`* button or [**Click Here**](https://sourceforge.net/projects/xampp/files/latest/download).
+3. Go to *`File Explorer`* and navigate to *`Downloads`* folder.
+4. Click on the *`xampp-windows-x64-8.2.12-0-VS16-installer.exe`*.
+5. The *`Installer Setup Wizard`* will start.
+6. We need to select the components to install. By default, all components are selected. We can uncheck the components that we don't need. But for *`Drupal`*, we need to install *`Apache`*, *`MySQL`*, *`PHP`*, and *`phpMyAdmin`*.
+7. We need to select the folder where *`XAMPP`* will be installed. 
+8. Select the Language. 
+9. Then the installation will start. 
+10. After the installation is complete, we can start the *`XAMPP`* web server.
+
+### Check this YouTube Video for more details:
+
+[**How to Install Drupal 10 on Windows 11 using xampp server | Drupal Installation | Drupal Tutorial #1**](https://youtu.be/NTNWIk3gdFY?si=D1Qm-OWiQUc5GLPI)
