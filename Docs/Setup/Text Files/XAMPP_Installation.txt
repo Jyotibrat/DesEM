@@ -1,4 +1,4 @@
-# XAMPP Installation Guide (Windows)
+MPP Installation Guide (Windows)
 
 1. Go to https://sourceforge.net/projects/xampp.
 2. Click on the `Download` button.

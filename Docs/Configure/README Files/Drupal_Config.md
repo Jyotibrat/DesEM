@@ -1,0 +1,34 @@
+# Drupal Configuration (Windows)
+
+1. Make sure you start the XAMPP Web Server.
+2. Go to *`http://localhost/[replace_this_with_the_directory_name_where_the_project_is_stored]`*. Eg: *`http://localhost/event_registration`* the name of the directory where the project is stored is *`event_registration`*.
+3. Once the site is open, it will ask to *`Choose Language`*.
+4. After selecting the Language click on *`Save and Continue`*.
+5. Now, it will ask to *`Choose Profile`*.
+    - *`Standard`* (Install with commonly used features pre-configured.)
+    - *`Minimal`* (Build a custom site without pre-configured functionality. Suitable for advanced users.)
+    - *`Demo: Umami Food Magazine(Experimental)`* (Install an example site that shows off some of Drupal's capabilities.)
+6. In our case, we can choose *`Standard Profile`* to test the custom module.
+7. Click on *`Save and Continue`*.
+8. After this we asked to *`Verify requirements`*.
+9. In the *`Verify requirements`* section we can encounter with some error if not fixed properly.
+10. Next section is the *`Set up database`*.
+11. If we are using *`MySQL Workbench`* then the entered fields will be different and if we are using *`phpMyAdmin`* then the entered fields will be different.
+12. Next Section is *`Install site`*.
+13. In this section, the installation for the site will start.
+14. After that we go to *`Configure site`* section.
+15. In this section, fill these fields:
+    - *`Site Name`*: *`DesEM`* (In our case)
+    - *`Site email address`*: *`bjyotibrat@gmail.com`* (In our case)
+    - *`Username`*: *`BJYOTIBRAT`* (In our case)
+    - *`Password`*: Fill this according to the user.
+    - *`Email address`*: *`bjyotibrat@gmail.com`* (In our case)
+    - *`Default country`*: *`India`* (In our case)
+    - *`Default time zone`*: *`Kolkata`* (In our case)
+16. Click on the *`check boxes`* bellow the fields.
+17. Click on *`Save and Continue`*.
+18. Now the site will be running fine.
+
+### Check this YouTube Video for more details:
+
+[**How to Install Drupal 10 on Windows 11 using xampp server | Drupal Installation | Drupal Tutorial #1**](https://youtu.be/NTNWIk3gdFY?si=D1Qm-OWiQUc5GLPI)
