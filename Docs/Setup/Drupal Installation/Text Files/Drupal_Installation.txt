@@ -1,4 +1,5 @@
 Drupal Installation Guide (Windows)
+-----------------------------------
 
 1. Go to https://www.drupal.org/project/drupal/releases/10.0.0*.
 2. Go to `Downloads` Section.

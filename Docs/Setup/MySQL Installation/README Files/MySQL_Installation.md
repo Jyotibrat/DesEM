@@ -15,4 +15,4 @@
 
 ### Check this YouTube Video for more details:
 
-[**How To Install MySQL on Windows 11**](https://youtu.be/a3HJnbYhXUc?si=7TfUhqOll1V3HLml)
+[**How to install MySQL 8.0.40 Server and Workbench latest version on Windows 11**](https://youtu.be/hiS_mWZmmI0?si=KI64qyJyNeFiCwOW)

@@ -1,4 +1,5 @@
-# MySQL Installation Guide (Windows)
+MySQL Installation Guide (Windows)
+----------------------------------
 
 1. Go to https://dev.mysql.com/downloads.
 2. At the bottom of the page click on `MySQL Installer for Windows`.
@@ -13,6 +14,8 @@
 11. The Download and the Installation Process will start.
 12. Once the Download is complete then the it will ask to configure the MySQL Workbench.
 
-### Check this YouTube Video for more details:
+Check this YouTube Video for more details:
 
-[How To Install MySQL on Windows 11](https://youtu.be/a3HJnbYhXUc?si=7TfUhqOll1V3HLml)
+`How to install MySQL 8.0.40 Server and Workbench latest version on Windows 11`
+
+https://youtu.be/hiS_mWZmmI0?si=q459mR5uODoXdTPL

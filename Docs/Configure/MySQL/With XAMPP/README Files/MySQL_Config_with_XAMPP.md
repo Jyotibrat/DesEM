@@ -1,0 +1,16 @@
+# MySQL Configuration with XAMPP (Windows)
+
+1. In this case we do not need to install the `MySQL` on *`Windows`*. We just need to install the *`XAMPP Web Server`*.
+2. Once the *`XAMPP`* installation is complete, then start the *`XAMPP Control Panel`*.
+3. In *`XAMPP Control Panel`*, click on the *`start`* button beside *`Apache`* and *`MySQL`*.
+4. After this, open a web browser and go to *http://localhost/dashboard*.
+5. In the Navbar, click on *`phpMyAdmin`*.
+6. On the Left Side click on *`New`* to create a new database.
+7. Enter the *`database name`* and click on *`create`* button.
+8. After this the *`database`* will be created and then we can also add *`tables`*.
+9. Now, in the *`Drupal Configuration`* of *`Set up database`* add the *`Database username`* as **root** and *`Database password`* as the password for the *`MySQL Server`* and the *`Database name`* as the one we have created earlier.
+10. This time the data will be stored in *`MySQL`* using the *`XAMPP Web Server`*.
+
+### Check this YouTube Video for more details:
+
+[**How to Install Drupal 10 on Windows 11 using xampp server | Drupal Installation | Drupal Tutorial #1**](https://youtu.be/NTNWIk3gdFY?si=D1Qm-OWiQUc5GLPI)

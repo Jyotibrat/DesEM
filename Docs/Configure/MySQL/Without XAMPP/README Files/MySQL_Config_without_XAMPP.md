@@ -1,0 +1,31 @@
+# MySQL Configuration without XAMPP (Windows)
+
+1. After the installation of MySQL is complete then, it will ask for *`Product Configuration`*.
+2. In *`Product Configuration`*, there are multiple sections:
+    - *Type and Networking*
+    - *Authentication Method*
+    - *Accounts and Roles*
+    - *Windows Service*
+    - *Server File Permissions*
+    - *Apply Configurations*
+3. For the *`Type and Networking`* section, click on the *`next`* button.
+4. For the *`Authentication Method`* section, there are two options:
+    - *Use Strong Password Encryption for Authentication (RECOMMENDED)*
+    - *Use Legacy Authentication Method (Retain MySQL 5.x Compatibility)*
+5. Select the first option which is *`Use Strong Password Encryption for Authentication (RECOMMENDED)`* and click on the *`next`* button.
+6. In the *`Accounts and Roles`* section, write the *`MySQL Root Password`* according your choice and click on the *`next`* button.
+7. In the *`Windows Service`* section, do not make any changes and click on the *`next`* button.
+8. In the *`Server File Permissions`* section there are three options:
+    - Yes, grant full access to the user running the Windows Service (if applicable) and the administrators group only. Other users and groups will not have access.
+    - Yes, but let me review and configure the level of access.
+    - No, I will manage the permissions after the server configuration.
+9. Choose the first option which is *`Yes, grant full access to the user running the Windows Service (if applicable) and the administrators group only. Other users and groups will not have access.`* and click on the *`next`* button.
+10. In the *`Apply Configurations`* section, click on the *`Execute`* button.
+11. Following these steps the configuration of MySQL will be completed.
+12. Once everything is complete, start the *`MySQL Workbench`* so that we can add the database of the users for the *`Custom Drupal Modul`*.
+13. In the *`Drupal Configuration`* of *`Set up database`* add the *`Database username`* as **root** and *`Database password`* as the password for the *`MySQL Server`*.
+14. In this case, we do not need to *`start`* the *`MySQL server`* in *`XAMPP`*.
+
+### Check this YouTube Video for more details:
+
+[**How to install MySQL 8.0.40 Server and Workbench latest version on Windows 11**](https://youtu.be/hiS_mWZmmI0?si=KI64qyJyNeFiCwOW)
