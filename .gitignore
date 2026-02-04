@@ -30,7 +30,6 @@
 /.eslintignore
 /.eslintrc.json
 /.csslintrc
-/.gitattributes
 
 # Ignore Drupal installation files
 /INSTALL.txt
@@ -38,12 +37,6 @@
 /example.gitignore
 
 # Ignore extra documentation files in root
-/ARCHITECTURE.md
-/FRONTEND_GUIDE.md
-/MODULE_SUMMARY.md
-/QUICKSTART_CHECKLIST.md
-/SETUP_GUIDE.md
-/XAMPP_INSTALLATION_GUIDE.md
 /database.settings.example.php
 
 # Ignore duplicate module files in root
@@ -56,8 +49,6 @@
 /event_registration.libraries.yml
 /src
 /config
-/css
-/js
 
 # Ignore OS files
 .DS_Store
