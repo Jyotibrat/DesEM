@@ -1,8 +1,8 @@
-# Testing Documentation
+# Archive Documentation
 
 ## Overview
 
-This testing code is basically a CMS (Content Management System) which is built using Django for the backend and React.js for the frontend.
+This archive code is basically a CMS (Content Management System) which is built using Django for the backend and React.js for the frontend.
 
 ## Status
 
