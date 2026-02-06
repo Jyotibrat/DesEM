@@ -1,0 +1,335 @@
+.registration-page {
+    min-height: 100vh;
+    background: var(--gray-50);
+}
+
+.registration-header {
+    position: relative;
+    background: var(--gradient-primary);
+    color: white;
+    padding: 4rem 0 3rem;
+    margin-bottom: 3rem;
+    overflow: hidden;
+}
+
+.header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.event-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-full);
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.registration-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.event-desc {
+    font-size: 1.25rem;
+    opacity: 0.95;
+    max-width: 700px;
+    position: relative;
+    z-index: 1;
+}
+
+.registration-container {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 2rem;
+    align-items: start;
+    padding-bottom: 4rem;
+}
+
+.form-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-xl);
+}
+
+.form-card h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-subtitle {
+    color: var(--gray-600);
+    margin-bottom: 2rem;
+}
+
+.info-card-sticky {
+    position: sticky;
+    top: 100px;
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.info-card-sticky h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--gray-900);
+}
+
+.detail-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--gray-50);
+    border-radius: var(--radius-lg);
+    margin-bottom: 1rem;
+}
+
+.detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.detail-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-lg);
+    background: var(--gradient-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.detail-item label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--gray-500);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+}
+
+.detail-item p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--gray-900);
+    margin: 0;
+}
+
+.capacity-bar {
+    width: 100%;
+    height: 6px;
+    background: var(--gray-200);
+    border-radius: var(--radius-full);
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+.capacity-fill {
+    height: 100%;
+    background: var(--gradient-success);
+    border-radius: var(--radius-full);
+    transition: width var(--transition-slow);
+}
+
+/* Success State */
+.success-container {
+    max-width: 600px;
+    margin: 4rem auto;
+    text-align: center;
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: 4rem 3rem;
+    box-shadow: var(--shadow-2xl);
+}
+
+.success-icon {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 2rem;
+    border-radius: 50%;
+    background: var(--gradient-success);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+    animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.success-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--gray-900);
+}
+
+.success-details {
+    background: var(--gray-50);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.success-details p {
+    color: var(--gray-700);
+    margin-bottom: 0.5rem;
+}
+
+.success-details p:last-child {
+    margin-bottom: 0;
+}
+
+.success-info {
+    text-align: left;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--gray-100);
+}
+
+.success-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-row i {
+    width: 20px;
+    color: var(--primary);
+}
+
+/* Closed/Error States */
+.closed-container,
+.error-container {
+    max-width: 600px;
+    margin: 4rem auto;
+    text-align: center;
+    background: white;
+    border-radius: var(--radius-xl);
+    padding: 4rem 3rem;
+    box-shadow: var(--shadow-xl);
+}
+
+.closed-container i,
+.error-container i {
+    font-size: 4rem;
+    color: var(--danger);
+    margin-bottom: 1.5rem;
+}
+
+.closed-container h2,
+.error-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.closed-container p,
+.error-container p {
+    color: var(--gray-600);
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+}
+
+.event-info-box {
+    background: var(--gray-50);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.event-info-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.event-info-box p {
+    color: var(--gray-700);
+    margin: 0;
+}
+
+/* Loading State */
+.loading-container {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-container p {
+    margin-top: 1rem;
+    color: var(--gray-600);
+    font-size: 1.125rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .registration-container {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card-sticky {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .registration-header h1 {
+        font-size: 2rem;
+    }
+
+    .event-desc {
+        font-size: 1rem;
+    }
+
+    .form-card {
+        padding: 1.5rem;
+    }
+
+    .success-container,
+    .closed-container,
+    .error-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .success-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+    }
+}
