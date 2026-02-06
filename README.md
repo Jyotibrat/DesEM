@@ -12,8 +12,9 @@ A comprehensive *`Drupal 10-based`* Event Management and Registration System des
 - [Configuration](#configuration)
 - [Usage](#usage)
 - [Module Documentation](#module-documentation)
-- [Testing](#testing)
-- [Support & Documentation](#support--documentation)
+- [Support](#support)
+- [Project Information](#project-information)
+- [Project Attribution](#project-attribution)
 
 ---
 
@@ -44,28 +45,28 @@ A comprehensive *`Drupal 10-based`* Event Management and Registration System des
 
 ```
 DesEM/
-├── composer.json                    # PHP dependency management
-├── composer.lock                    # Locked dependency versions
-├── README.md                        # This file
-├── Docs/                           # Complete documentation
-│   ├── Docs.md                     # Documentation index
-│   ├── Configure/                  # Configuration guides
+├── composer.json
+├── composer.lock
+├── README.md
+├── Docs/
+│   ├── Docs.md
+│   ├── Configure/
 │   │   ├── Configure.md
 │   │   ├── Order_of_Configuration.md
 │   │   ├── Drupal/
 │   │   ├── MySQL/
 │   │   └── XAMPP/
-│   ├── Setup/                      # Installation guides
+│   ├── Setup/
 │   │   ├── Setup.md
 │   │   ├── Drupal Installation/
 │   │   ├── MySQL Installation/
 │   │   └── XAMPP Installation/
-│   └── Testing.md                  # Testing documentation
-├── modules/                        # Drupal modules
+│   └── Testing.md
+├── modules/
 │   └── custom/
-│       └── event_registration/     # Custom event registration module
-│           ├── src/               # PHP source code
-│           ├── config/            # Configuration files
+│       └── event_registration/
+│           ├── src/
+│           ├── config/
 │           ├── event_registration.sql
 │           ├── event_registration.info.yml
 │           ├── event_registration.module
@@ -74,15 +75,15 @@ DesEM/
 │           ├── event_registration.services.yml
 │           ├── README.md
 │           └── ...
-└── Testing/                        # Testing and backend files
-    ├── Testing.md
-    ├── backend/                    # Backend testing suite
+└── archive/
+    ├── Archive.md
+    ├── backend/
     │   ├── requirements.txt
     │   ├── event_registration/
     │   ├── events/
     │   ├── registrations/
     │   └── templates/
-    └── frontend/                   # Frontend testing resources
+    └── frontend/
         ├── package.json
         └── src/
 ```
@@ -106,7 +107,7 @@ Before installing DesEM, ensure you have the following:
 
 ## Installation & Setup
 
-For detailed installation and setup instructions, please refer to the documentation in the [**`Docs/Setup/`**](https://github.com/Jyotibrat/DesEM/tree/main/Docs/Setup) directory. This includes comprehensive guides for:
+For detailed installation and setup instructions, please refer to the documentation in the [**`docs/setup/`**](https://github.com/Jyotibrat/DesEM/tree/main/Docs/Setup) directory. This includes comprehensive guides for:
 
 - [**XAMPP Installation**](https://github.com/Jyotibrat/DesEM/tree/main/Docs/Setup/XAMPP%20Installation)
 - [**Drupal Installation**](https://github.com/Jyotibrat/DesEM/tree/main/Docs/Setup/Drupal%20Installation)
@@ -118,7 +119,7 @@ All step-by-step instructions are available in the setup documentation.
 
 ## Configuration
 
-For complete configuration instructions, please refer to the documentation in the [**`Docs/Configure/`**](https://github.com/Jyotibrat/DesEM/tree/main/Docs/Configure) directory. This includes detailed guides for:
+For complete configuration instructions, please refer to the documentation in the [**`docs/configure/`**](https://github.com/Jyotibrat/DesEM/tree/main/Docs/Configure) directory. This includes detailed guides for:
 
 - [**XAMPP Configuration**](https://github.com/Jyotibrat/DesEM/tree/main/Docs/Configure/XAMPP)
 - [**Drupal Configuration**](https://github.com/Jyotibrat/DesEM/tree/main/Docs/Configure/Drupal)
@@ -156,7 +157,7 @@ The module documentation includes details about the module structure, key files,
 
 ## Archive
 
-The [**`archive/`**]() directory contains unusable code from the development phase. This includes experimental implementations using Django as the backend and React as the frontend, which were developed during the initial development process but are not part of the final Drupal-based system.
+The [**`archive/`**](https://github.com/Jyotibrat/DesEM/tree/main/archive) directory contains unusable code from the development phase. This includes experimental implementations using Django as the backend and React as the frontend, which were developed during the initial development process but are not part of the final Drupal-based system.
 
 ---
 
@@ -164,7 +165,7 @@ The [**`archive/`**]() directory contains unusable code from the development pha
 
 If you need any support or have questions about this project, please feel free to contact me through:
 
-- **Email**: [bjyotibrat@gmail.com]()
+- **Email**: [bjyotibrat@gmail.com](mailto:bjyotibrat@gmail.com)
 - **LinkedIn**: [bindupautra-jyotibrat](https://www.linkedin.com/in/bindupautra-jyotibrat)
 - **Issue Tracker**: [Create an issue in the repository](https://github.com/Jyotibrat/DesEM/issues)
 
@@ -185,8 +186,8 @@ Your feedback and questions are welcome!
 
 ## Project Attribution
 
-This project was developed as a task round for **FOSSEE (Free and Open-Source Software for Education)** for Drupal.
+This project was developed as a task round for **FOSSEE (Free and Open-Source Software for Education)** for [**Drupal**](https://new.drupal.org/home).
 
 ---
 
-**For more information, please refer to the complete documentation in the [**`Docs/`**](https://github.com/Jyotibrat/DesEM/tree/main/Docs) folder.**
+**For more information, please refer to the complete documentation in the [**`docs/`**](https://github.com/Jyotibrat/DesEM/tree/main/Docs) folder.**
