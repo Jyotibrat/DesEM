@@ -6,29 +6,52 @@ This folder contains configuration instructions for the *`DesEM (Drupal Custom M
 
 ```
 Configure/
-├── Configure.md                          (This file)
-├── Order_of_Configuration.md             (Configuration order and sequence)
+├── README.md                          
+├── Order_of_Configuration.md             
 ├── Drupal/
 │   ├── README Files/
-│   │   └── Drupal_Config.md             (Drupal configuration instructions in Markdown)
+│   │   └── README.md             
 │   └── Text Files/
-│       └── Drupal_Config.txt            (Drupal configuration instructions in Text format)
+│       └── Drupal_Config.txt            
 ├── MySQL/
 │   ├── With XAMPP/
 │   │   ├── README Files/
-│   │   │   └── MySQL_Config_with_XAMPP.md    (MySQL config with XAMPP in Markdown)
+│   │   │   └── README.md    
 │   │   └── Text Files/
-│   │       └── MySQL_Config_with_XAMPP.txt   (MySQL config with XAMPP in Text format)
+│   │       └── MySQL_Config_with_XAMPP.txt    format
 │   └── Without XAMPP/
 │       ├── README Files/
-│       │   └── MySQL_Config_without_XAMPP.md (MySQL standalone config in Markdown)
+│       │   └── README.md 
 │       └── Text Files/
-│           └── MySQL_Config_without_XAMPP.txt (MySQL standalone config in Text format)
-└── XAMPP/
-    ├── README Files/
-    │   └── XAMPP_Config.md              (XAMPP configuration instructions in Markdown)
-    └── Text Files/
-        └── XAMPP_Config.txt             (XAMPP configuration instructions in Text format)
+│           └── MySQL_Config_without_XAMPP.txt 
+├── XAMPP/
+│   ├── README Files/
+│   │   └── README.md              
+│   └── Text Files/
+│       └── XAMPP_Config.txt             
+└── Web-App/
+    ├── client/
+    │   └── Supabase/
+    │       ├── README Files/
+    │       │   └── README.md
+    │       └── Text Files/
+    │           └── Supabase_Integration_Client_Side.txt
+    └── server/
+        ├── MongoDB/
+        │   ├── README Files/
+        │   │   └── README.md
+        │   └── Text Files/
+        │       └── MongoDB_Compass_Configuration_Guide.txt
+        ├── SMTP/
+        │   ├── README Files/
+        │   │   └── README.md
+        │   └── Text Files/
+        │       └── SMTP_Server_Configuration.txt
+        └── Supabase/
+            ├── README Files/
+            │   └── README.md
+            └── Text Files/
+                └── Supabase_Integration_Server_Side.txt
 ```
 
 ## Folder Contents
@@ -52,3 +75,8 @@ Each variant includes both *`Markdown`* and *`text`* format versions.
 Contains configuration instructions for setting up and configuring *`XAMPP`*, which includes the Apache web server and MySQL database.
 - **README Files/**: *`XAMPP`* configuration guide in Markdown format.
 - **Text Files/**: *`XAMPP`* configuration guide in plain text format.
+
+### Web-App/
+Contains configuration instructions for setting up and configuring the *`Web-App`* in local machine.
+- **client/**: It contains the configuration of `Supabase` on the `client` side.
+- **server/**: It contains the configuration of `Supabase`, `SMTP` and `MongoDB Compass` on the `server` side.

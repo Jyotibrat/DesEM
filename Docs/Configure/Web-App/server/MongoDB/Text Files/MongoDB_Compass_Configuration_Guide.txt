@@ -1,4 +1,5 @@
 MONGODB Compass Configuration Guide (Windows)
+---------------------------------------------
 
 1. MongoDB Connection String:
 

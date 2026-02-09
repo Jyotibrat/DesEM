@@ -1,4 +1,5 @@
 Supabase Integration for the Client Side (Windows)
+--------------------------------------------------
 
 1. clone the repositoy:
 

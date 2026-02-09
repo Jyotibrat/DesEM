@@ -11,10 +11,10 @@
 4. Right Click on it and click on `open with code`.
 5. The folder will open in `VS Code`.
 6. Open the terminal in VS Code by click on **Ctrl + `** or click on *Terminal* in the navbar and then click on *New Terminal*.
-7. Paste this command to go to `client` directory:
+7. Paste this command to go to `server` directory:
 
     ```powershell
-    cd apps/web-app/client
+    cd apps/web-app/server
     ```
 
 8. Now, run the `npm` command:
@@ -43,7 +43,11 @@
 22. Copy the contents of the `.env` file from `.env.example` file.
 23. Replace the fields with the contents we have copied earlier from `Supabase`.
 
+---
+
 # For more details look at these docs
 
 - [**Auth | Supabase Docs**](https://supabase.com/docs/guides/auth)
 - [**Supabase Docs**](https://supabase.com/docs)
+
+---

@@ -26,6 +26,10 @@
 13. In the *`Drupal Configuration`* of *`Set up database`* add the *`Database username`* as **root** and *`Database password`* as the password for the *`MySQL Server`*.
 14. In this case, we do not need to *`start`* the *`MySQL server`* in *`XAMPP`*.
 
-### Check this YouTube Video for more details:
+---
+
+# Check this YouTube Video for more details:
 
 [**How to install MySQL 8.0.40 Server and Workbench latest version on Windows 11**](https://youtu.be/hiS_mWZmmI0?si=KI64qyJyNeFiCwOW)
+
+---

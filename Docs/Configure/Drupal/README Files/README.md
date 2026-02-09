@@ -29,6 +29,10 @@
 17. Click on *`Save and Continue`*.
 18. Now the site will be running fine.
 
-### Check this YouTube Video for more details:
+---
+
+# Check this YouTube Video for more details:
 
 [**How to Install Drupal 10 on Windows 11 using xampp server | Drupal Installation | Drupal Tutorial #1**](https://youtu.be/NTNWIk3gdFY?si=D1Qm-OWiQUc5GLPI)
+
+---

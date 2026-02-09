@@ -1,5 +1,5 @@
 MySQL Configuration without XAMPP (Windows)
------------------------------
+-------------------------------------------
 
 1. After the installation of MySQL is complete then, it will ask for `Product Configuration`.
 2. In `Product Configuration`, there are multiple sections:

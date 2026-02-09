@@ -6,7 +6,7 @@
     git clone https://github.com/Jyotibrat/DesEM.git
     ```
 
-2. Open the File Explorer.
+2. Open the `File Explorer`.
 3. Go to the clone repository folder titled as `DesEM`.
 4. Right Click on it and click on `open with code`.
 5. The folder will open in `VS Code`.
@@ -42,7 +42,11 @@
 21. Copy the contents of the `.env` file from `.env.example` file.
 22. Replace the fields with the contents we have copied earlier from `Supabase`.
 
+---
+
 # For more details look at these docs
 
 - [**Auth | Supabase Docs**](https://supabase.com/docs/guides/auth)
 - [**Supabase Docs**](https://supabase.com/docs)
+
+---

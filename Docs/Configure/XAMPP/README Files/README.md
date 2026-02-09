@@ -14,6 +14,10 @@
 12. Then, refresh the *`web browser`* where *`Drupal`* was being setup.
 13. The error will be resolved and then, we can click on **continue anyway** at the bottom of the page to move to the next section which is *`Set up database`*.
 
-### Check this YouTube Video for more details:
+---
+
+# Check this YouTube Video for more details:
 
 [**How to Install Drupal 10 on Windows 11 using xampp server | Drupal Installation | Drupal Tutorial #1**](https://youtu.be/NTNWIk3gdFY?si=D1Qm-OWiQUc5GLPI)
+
+---

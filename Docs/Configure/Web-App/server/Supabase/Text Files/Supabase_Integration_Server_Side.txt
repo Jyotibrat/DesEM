@@ -1,4 +1,5 @@
 Supabase Integration for the Server Side (Windows)
+--------------------------------------------------
 
 1. clone the repositoy:
 
@@ -11,10 +12,10 @@ Supabase Integration for the Server Side (Windows)
 4. Right Click on it and click on open with code.
 5. The folder will open in VS Code.
 6. Open the terminal in VS Code by click on Ctrl + ` or click on Terminal in the navbar and then click on New Terminal.
-7. Paste this command to go to client directory:
+7. Paste this command to go to server directory:
 
     ```powershell
-    cd apps/web-app/client
+    cd apps/web-app/server
     ```
 
 8. Now, run the npm command:

@@ -42,7 +42,11 @@
 12. Go back to the project and then to .env file.
 13. Paste the copied generated password in the `SMTP_PASS` field.
 
+---
+
 # For more details refer to these docs
 
 [**IMAP, POP, and SMTP | Gmail**](https://developers.google.com/workspace/gmail/imap/imap-smtp)
 [**How to Use the Gmail SMTP Server to Send Emails For Free**](https://www.geeksforgeeks.org/techtips/how-to-use-the-gmail-smtp-server-to-send-emails-for-free/)
+
+---

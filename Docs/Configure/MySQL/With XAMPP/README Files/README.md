@@ -11,6 +11,10 @@
 9. Now, in the *`Drupal Configuration`* of *`Set up database`* add the *`Database username`* as **root** and *`Database password`* as the password for the *`MySQL Server`* and the *`Database name`* as the one we have created earlier.
 10. This time the data will be stored in *`MySQL`* using the *`XAMPP Web Server`*.
 
-### Check this YouTube Video for more details:
+---
+
+# Check this YouTube Video for more details:
 
 [**How to Install Drupal 10 on Windows 11 using xampp server | Drupal Installation | Drupal Tutorial #1**](https://youtu.be/NTNWIk3gdFY?si=D1Qm-OWiQUc5GLPI)
+
+---
