@@ -6,17 +6,17 @@ A custom Drupal 10 module for managing event registrations with AJAX-enabled for
 
 ---
 
-## 📋 Overview
+## Overview
 
 This module provides a complete event registration system for Drupal 10, allowing administrators to create and manage events while users can register through an intuitive AJAX-powered form.
 
 **Developed for**: FOSSEE Internship Task Round  
 **Drupal Version**: 10.x  
-**Database**: MySQL/MariaDB (PostgreSQL compatible)
+**Database**: MySQL (PostgreSQL compatible)
 
 ---
 
-## ✨ Features
+## Features
 
 ### Event Configuration
 - Admin interface to create events
@@ -46,7 +46,35 @@ This module provides a complete event registration system for Drupal 10, allowin
 
 ---
 
-## 📦 Requirements
+## Module Structure
+
+```
+event_registration/
+├── config/
+│   └── install/
+│       └── event_registration.settings.yml
+├── src/
+│   ├── Controller/
+│   │   └── RegistrationListController.php
+│   ├── Form/
+│   │   ├── AdminConfigForm.php
+│   │   ├── EventConfigForm.php
+│   │   └── EventRegistrationForm.php
+│   └── Service/
+│       └── EmailService.php
+├── event_registration.info.yml
+├── event_registration.install
+├── event_registration.module
+├── event_registration.permissions.yml
+├── event_registration.routing.yml
+├── event_registration.services.yml
+├── event_registration.sql
+└── README.md
+```
+
+---
+
+## Requirements
 
 - **Drupal**: 10.x
 - **PHP**: 8.1 or higher
@@ -54,78 +82,29 @@ This module provides a complete event registration system for Drupal 10, allowin
 
 ---
 
-## 🚀 Installation
+## Installation
 
-### Step 1: Copy the Module
-
-Copy this folder to your Drupal installation:
-
-```bash
-cp -r event_registration /path/to/drupal/modules/custom/
-```
-
-### Step 2: Enable the Module
-
-**Using Drush:**
-```bash
-drush en event_registration -y
-drush cr
-```
-
-**Using Drupal UI:**
-1. Navigate to **Extend** (`/admin/modules`)
-2. Find "Event Registration" under "Custom"
-3. Check the box and click "Install"
-
-### Step 3: Configure Permissions
-
-Navigate to **People > Permissions** (`/admin/people/permissions`)
-
-Assign permissions:
-- **Administer event registration** → Administrator role
-- **Access event registration form** → Authenticated/Anonymous users
+Read the [*docs*](https://github.com/Jyotibrat/DesEM/tree/main/Docs/Setup) for the Installation.
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
-### Creating Events
-
-1. Navigate to `/admin/config/event-registration/config`
-2. Fill in event details
-3. Click "Save Event Configuration"
-
-### Admin Email Settings
-
-1. Navigate to `/admin/config/event-registration/settings`
-2. Enter admin notification email
-3. Enable admin notifications
-4. Save configuration
+Read the [*docs*](https://github.com/Jyotibrat/DesEM/tree/main/Docs/Configure) for the configuration.
 
 ---
 
-## 📖 Usage
+## Technical Details
 
-### For Users
-
-1. Visit `/event-registration`
-2. Fill in personal information
-3. Select Category (AJAX updates Event Date)
-4. Select Event Date (AJAX updates Event Name)
-5. Select Event Name
-6. Click "Register"
-
-### For Administrators
-
-#### View Registrations
-Visit `/admin/event-registration/list`
-
-#### Export Data
-Click "Export to CSV" on the listing page
+- **PSR-4 Autoloading**: Proper namespacing
+- **Dependency Injection**: Full DI implementation
+- **Drupal Coding Standards**: Compliant
+- **AJAX Framework**: Drupal core AJAX
+- **Config API**: All settings configurable
 
 ---
 
-## 🗄️ Database Schema
+## Database Schema
 
 ### Table: event_registration_config
 
@@ -164,64 +143,23 @@ Stores user registration submissions.
 
 ---
 
-## 📁 Module Structure
+## Usage
 
-```
-event_registration/
-├── config/
-│   └── install/
-│       └── event_registration.settings.yml
-├── src/
-│   ├── Controller/
-│   │   └── RegistrationListController.php
-│   ├── Form/
-│   │   ├── AdminConfigForm.php
-│   │   ├── EventConfigForm.php
-│   │   └── EventRegistrationForm.php
-│   └── Service/
-│       └── EmailService.php
-├── event_registration.info.yml
-├── event_registration.install
-├── event_registration.module
-├── event_registration.permissions.yml
-├── event_registration.routing.yml
-├── event_registration.services.yml
-├── event_registration.sql
-└── README.md
-```
+### For Users
+
+1. Visit `/event-registration`
+2. Fill in personal information
+3. Select Category (AJAX updates Event Date)
+4. Select Event Date (AJAX updates Event Name)
+5. Select Event Name
+6. Click "Register"
+
+### For Administrators
+
+#### View Registrations
+Visit `/admin/event-registration/list`
+
+#### Export Data
+Click "Export to CSV" on the listing page
 
 ---
-
-## 🔧 Technical Details
-
-- **PSR-4 Autoloading**: Proper namespacing
-- **Dependency Injection**: Full DI implementation
-- **Drupal Coding Standards**: Compliant
-- **AJAX Framework**: Drupal core AJAX
-- **Config API**: All settings configurable
-
----
-
-## 🎯 URLs
-
-| URL | Description | Permission |
-|-----|-------------|------------|
-| `/event-registration` | Registration form | `access event registration form` |
-| `/admin/config/event-registration/config` | Create events | `administer event registration` |
-| `/admin/config/event-registration/settings` | Admin settings | `administer event registration` |
-| `/admin/event-registration/list` | View registrations | `administer event registration` |
-
----
-
-## 📄 License
-
-This module is provided for educational purposes as part of the FOSSEE internship task.
-
----
-
-## 👤 Author
-
-**FOSSEE Internship Task Submission**  
-**Module**: Event Registration  
-**Drupal Version**: 10.x  
-**Date**: February 2026

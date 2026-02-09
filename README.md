@@ -48,44 +48,11 @@ DesEM/
 ├── composer.json
 ├── composer.lock
 ├── README.md
-├── Docs/
-│   ├── Docs.md
-│   ├── Configure/
-│   │   ├── Configure.md
-│   │   ├── Order_of_Configuration.md
-│   │   ├── Drupal/
-│   │   ├── MySQL/
-│   │   └── XAMPP/
-│   ├── Setup/
-│   │   ├── Setup.md
-│   │   ├── Drupal Installation/
-│   │   ├── MySQL Installation/
-│   │   └── XAMPP Installation/
-│   └── Testing.md
 ├── modules/
-│   └── custom/
-│       └── event_registration/
-│           ├── src/
-│           ├── config/
-│           ├── event_registration.sql
-│           ├── event_registration.info.yml
-│           ├── event_registration.module
-│           ├── event_registration.permissions.yml
-│           ├── event_registration.routing.yml
-│           ├── event_registration.services.yml
-│           ├── README.md
-│           └── ...
-└── archive/
-    ├── Archive.md
-    ├── backend/
-    │   ├── requirements.txt
-    │   ├── event_registration/
-    │   ├── events/
-    │   ├── registrations/
-    │   └── templates/
-    └── frontend/
-        ├── package.json
-        └── src/
+├── docs/
+├── archive/
+├── apps/
+└── .github/
 ```
 
 ---
@@ -112,6 +79,7 @@ For detailed installation and setup instructions, please refer to the documentat
 - [**XAMPP Installation**](https://github.com/Jyotibrat/DesEM/tree/main/Docs/Setup/XAMPP%20Installation)
 - [**Drupal Installation**](https://github.com/Jyotibrat/DesEM/tree/main/Docs/Setup/Drupal%20Installation)
 - [**MySQL Installation**](https://github.com/Jyotibrat/DesEM/tree/main/Docs/Setup/MySQL%20Installation)
+- [**Apps Setup**](https://github.com/Jyotibrat/DesEM/tree/main/Docs/Setup/Web-App) (Optional)
 
 All step-by-step instructions are available in the setup documentation.
 
@@ -125,6 +93,7 @@ For complete configuration instructions, please refer to the documentation in th
 - [**Drupal Configuration**](https://github.com/Jyotibrat/DesEM/tree/main/Docs/Configure/Drupal)
 - [**MySQL Configuration**](https://github.com/Jyotibrat/DesEM/tree/main/Docs/Configure/MySQL)
 - [**Configuration order**](https://github.com/Jyotibrat/DesEM/blob/main/Docs/Configure/Order_of_Configuration.md)
+- [**Apps Configuration**](https://github.com/Jyotibrat/DesEM/tree/main/Docs/Configure/Web-App) (Optional)
 
 All configuration guides and documentation are available in the configure directory.
 
