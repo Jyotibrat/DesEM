@@ -1,8 +1,8 @@
 const cron = require('node-cron');
 const Event = require('../models/Event');
 const Registration = require('../models/Registration');
-const { sendEventReminder } = require('../services/emailService');
-const EventCollectionService = require('../services/eventCollectionService');
+const { sendEventReminder } = require('./emailService');
+const EventCollectionService = require('./eventCollectionService');
 
 // Run every hour to check for events happening in 24 hours
 const scheduleEventReminders = () => {
