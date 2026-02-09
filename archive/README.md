@@ -14,3 +14,5 @@ This archive code is basically a CMS (Content Management System) which is built 
 - **Frontend**: React.js-based user interface for interacting with the CMS
 - **Database**: Models and serializers for data management
 - **API Integration**: Email notifications and event registration services
+
+---
