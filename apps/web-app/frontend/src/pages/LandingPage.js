@@ -142,7 +142,7 @@ const LandingPage = () => {
                 <div className="container">
                     <div className="footer-content">
                         <div className="footer-section">
-                            <h4>Event Management System</h4>
+                            <h4>DesEM</h4>
                             <p>Making event management simple and efficient.</p>
                         </div>
                         <div className="footer-section">
@@ -154,11 +154,11 @@ const LandingPage = () => {
                         </div>
                         <div className="footer-section">
                             <h5>Contact</h5>
-                            <p>support@eventmanagement.com</p>
+                            <p>bjyotibrat@gmail.com</p>
                         </div>
                     </div>
                     <div className="footer-bottom">
-                        <p>&copy; 2026 Event Management System. All rights reserved.</p>
+                        <p>&copy; 2026 DesEM. All rights reserved.</p>
                     </div>
                 </div>
             </footer>

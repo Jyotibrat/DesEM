@@ -17,7 +17,7 @@ const Navbar = () => {
             <div className="container navbar-content">
                 <Link to="/" className="navbar-brand">
                     <i className="fas fa-calendar-alt"></i>
-                    <span>Event Manager</span>
+                    <span>DesEM</span>
                 </Link>
 
                 <div className="navbar-menu">

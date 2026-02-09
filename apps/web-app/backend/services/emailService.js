@@ -2,34 +2,34 @@ const nodemailer = require('nodemailer');
 
 // Create transporter
 const createTransporter = () => {
-    return nodemailer.createTransporter({
-        host: process.env.SMTP_HOST || 'smtp.gmail.com',
-        port: process.env.SMTP_PORT || 587,
-        secure: false, // true for 465, false for other ports
-        auth: {
-            user: process.env.SMTP_USER,
-            pass: process.env.SMTP_PASS
-        }
-    });
+  return nodemailer.createTransport({
+    host: process.env.SMTP_HOST || 'smtp.gmail.com',
+    port: process.env.SMTP_PORT || 587,
+    secure: false, // true for 465, false for other ports
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS
+    }
+  });
 };
 
 // Send registration confirmation email
 exports.sendRegistrationConfirmation = async (registration, event) => {
-    try {
-        const transporter = createTransporter();
+  try {
+    const transporter = createTransporter();
 
-        const eventDate = new Date(event.eventDate).toLocaleDateString('en-US', {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
+    const eventDate = new Date(event.eventDate).toLocaleDateString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
 
-        const mailOptions = {
-            from: `"${process.env.SMTP_FROM_NAME || 'Event Management'}" <${process.env.SMTP_USER}>`,
-            to: registration.email,
-            subject: `Registration Confirmed: ${event.title}`,
-            html: `
+    const mailOptions = {
+      from: `"${process.env.SMTP_FROM_NAME || 'Event Management'}" <${process.env.SMTP_USER}>`,
+      to: registration.email,
+      subject: `Registration Confirmed: ${event.title}`,
+      html: `
         <!DOCTYPE html>
         <html>
         <head>
@@ -85,34 +85,34 @@ exports.sendRegistrationConfirmation = async (registration, event) => {
         </body>
         </html>
       `
-        };
+    };
 
-        const info = await transporter.sendMail(mailOptions);
-        console.log('✅ Registration confirmation email sent:', info.messageId);
-        return true;
-    } catch (error) {
-        console.error('❌ Error sending registration confirmation email:', error);
-        return false;
-    }
+    const info = await transporter.sendMail(mailOptions);
+    console.log('✅ Registration confirmation email sent:', info.messageId);
+    return true;
+  } catch (error) {
+    console.error('❌ Error sending registration confirmation email:', error);
+    return false;
+  }
 };
 
 // Send event reminder email (24 hours before)
 exports.sendEventReminder = async (registration, event) => {
-    try {
-        const transporter = createTransporter();
+  try {
+    const transporter = createTransporter();
 
-        const eventDate = new Date(event.eventDate).toLocaleDateString('en-US', {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
+    const eventDate = new Date(event.eventDate).toLocaleDateString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
 
-        const mailOptions = {
-            from: `"${process.env.SMTP_FROM_NAME || 'Event Management'}" <${process.env.SMTP_USER}>`,
-            to: registration.email,
-            subject: `Reminder: ${event.title} is Tomorrow!`,
-            html: `
+    const mailOptions = {
+      from: `"${process.env.SMTP_FROM_NAME || 'Event Management'}" <${process.env.SMTP_USER}>`,
+      to: registration.email,
+      subject: `Reminder: ${event.title} is Tomorrow!`,
+      html: `
         <!DOCTYPE html>
         <html>
         <head>
@@ -171,26 +171,26 @@ exports.sendEventReminder = async (registration, event) => {
         </body>
         </html>
       `
-        };
+    };
 
-        const info = await transporter.sendMail(mailOptions);
-        console.log('✅ Event reminder email sent:', info.messageId);
-        return true;
-    } catch (error) {
-        console.error('❌ Error sending event reminder email:', error);
-        return false;
-    }
+    const info = await transporter.sendMail(mailOptions);
+    console.log('✅ Event reminder email sent:', info.messageId);
+    return true;
+  } catch (error) {
+    console.error('❌ Error sending event reminder email:', error);
+    return false;
+  }
 };
 
 // Test email configuration
 exports.testEmailConfig = async () => {
-    try {
-        const transporter = createTransporter();
-        await transporter.verify();
-        console.log('✅ Email configuration is valid');
-        return true;
-    } catch (error) {
-        console.error('❌ Email configuration error:', error);
-        return false;
-    }
+  try {
+    const transporter = createTransporter();
+    await transporter.verify();
+    console.log('✅ Email configuration is valid');
+    return true;
+  } catch (error) {
+    console.error('❌ Email configuration error:', error);
+    return false;
+  }
 };
