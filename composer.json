@@ -93,5 +93,8 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "require-dev": {
+        "drush/drush": "^12.5"
     }
 }
