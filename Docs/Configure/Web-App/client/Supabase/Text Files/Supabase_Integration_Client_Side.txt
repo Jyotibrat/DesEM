@@ -1,0 +1,48 @@
+Supabase Integration for the Client Side (Windows)
+
+1. clone the repositoy:
+
+    ```git
+    git clone https://github.com/Jyotibrat/DesEM.git
+    ```
+
+2. Open the File Explorer.
+3. Go to the clone repository folder titled as DesEM.
+4. Right Click on it and click on open with code.
+5. The folder will open in VS Code.
+6. Open the terminal in VS Code by click on Ctrl + ` or click on Terminal in the navbar and then click on New Terminal.
+7. Paste this command to go to client directory:
+
+    ```powershell
+    cd apps/web-app/client
+    ```
+
+8. Now, run the npm command:
+
+    ```npm
+    npm install
+    ```
+
+9. If there exists any issues installing the node modules then, run this command:
+
+    ```npm
+    npm audit fix --force
+    ```
+10. Go to Supabase official website.
+11. Create an account or login with your existing account.
+12. Create an organization (if already not created).
+13. Click New Project (if not already created).
+14. Open your project dashboard.
+15. Navigate to Project Settings then to API Keys.
+16. Click on Legacy anon, service_role API Keys.
+17. Copy the anon public key.
+18. Click on Data API.
+19. Copy the Project URL.
+20. Now, go to the project and create a .env file in the client folder.
+21. Copy the contents of the .env file from .env.example file.
+22. Replace the fields with the contents we have copied earlier from Supabase.
+
+For more details look at these docs:
+
+Auth | Supabase Docs: https://supabase.com/docs/guides/auth
+Supabase Docs: https://supabase.com/docs
