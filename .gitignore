@@ -65,10 +65,6 @@ Thumbs.db
 *.bak
 *.cache
 
-# Ignore database dumps (except our schema file)
-*.sql
-!modules/custom/event_registration/event_registration.sql
-
 # Ignore environment files
 .env
 .env.local
