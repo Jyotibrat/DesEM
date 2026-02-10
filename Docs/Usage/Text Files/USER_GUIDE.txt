@@ -1,22 +1,23 @@
-# Event Registration User Guide
+Event Registration User Guide
+-----------------------------
 
-## Table of Contents
+Table of Contents:
 
-1. [Introduction](#introduction)
-2. [Creating an Event](#creating-an-event)
-3. [Registering for an Event](#registering-for-an-event)
-4. [Viewing Registrations](#viewing-registrations)
-5. [Exporting Registration Data](#exporting-registration-data)
-6. [Configuring Email Notifications](#configuring-email-notifications)
-7. [Troubleshooting](#troubleshooting)
+1. [Introduction](introduction)
+2. [Creating an Event](creating-an-event)
+3. [Registering for an Event](registering-for-an-event)
+4. [Viewing Registrations](viewing-registrations)
+5. [Exporting Registration Data](exporting-registration-data)
+6. [Configuring Email Notifications](configuring-email-notifications)
+7. [Troubleshooting](troubleshooting)
 
 ---
 
-## Introduction
+Introduction:
 
 The Event Registration module allows administrators to create events and manage registrations. Users can register for events through a public registration form. This guide covers both administrative tasks (creating events) and user tasks (registering for events).
 
-### Key Features
+Key Features:
 
 - Create and manage multiple events
 - Set registration periods for each event
@@ -29,96 +30,96 @@ The Event Registration module allows administrators to create events and manage 
 
 ---
 
-## Creating an Event
+Creating an Event:
 
-### Prerequisites
+Prerequisites:
 
 - Administrator account with "administer event registration" permission
 - Access to Drupal admin interface
 
-### Step 1: Access Event Configuration Form
+ Step 1: Access Event Configuration Form
 
 1. Log in to your Drupal site as an administrator
-2. Navigate to: **Configuration** > **Event Registration** > **Event Configuration**
+2. Navigate to: Configuration > Event Registration > Event Configuration
 3. Or access directly: `http://localhost/event_registration/admin/config/event-registration/config`
 
-### Step 2: Fill Out Event Details
+ Step 2: Fill Out Event Details
 
 The event configuration form contains the following fields:
 
-#### Event Registration Start Date
+Event Registration Start Date:
 
-- **Field Type:** Date picker
-- **Required:** Yes
-- **Description:** The date when registration opens for the event
-- **Format:** YYYY-MM-DD
-- **Example:** 2026-03-01
+- Field Type: Date picker
+- Required: Yes
+- Description: The date when registration opens for the event
+- Format: YYYY-MM-DD
+- Example: 2026-03-01
 
-**Important:** Users will not be able to register before this date.
+Important: Users will not be able to register before this date.
 
-#### Event Registration End Date
+Event Registration End Date:
 
-- **Field Type:** Date picker
-- **Required:** Yes
-- **Description:** The date when registration closes for the event
-- **Format:** YYYY-MM-DD
-- **Example:** 2026-03-15
+- Field Type: Date picker
+- Required: Yes
+- Description: The date when registration closes for the event
+- Format: YYYY-MM-DD
+- Example: 2026-03-15
 
-**Important:** Users will not be able to register after this date.
+Important: Users will not be able to register after this date.
 
-#### Event Date
+Event Date:
 
-- **Field Type:** Date picker
-- **Required:** Yes
-- **Description:** The actual date when the event will take place
-- **Format:** YYYY-MM-DD
-- **Example:** 2026-03-20
+- Field Type: Date picker
+- Required: Yes
+- Description: The actual date when the event will take place
+- Format: YYYY-MM-DD
+- Example: 2026-03-20
 
-**Validation:** Event date must be on or after the registration start date.
+Validation: Event date must be on or after the registration start date.
 
-#### Event Name
+Event Name:
 
-- **Field Type:** Text field
-- **Required:** Yes
-- **Max Length:** 255 characters
-- **Description:** The name of your event
-- **Example:** "Introduction to Web Development Workshop"
+- Field Type: Text field
+- Required: Yes
+- Max Length: 255 characters
+- Description: The name of your event
+- Example: "Introduction to Web Development Workshop"
 
-**Validation:** Event name should not contain special characters (only letters, numbers, and spaces allowed).
+Validation: Event name should not contain special characters (only letters, numbers, and spaces allowed).
 
-#### Category of the Event
+Category of the Event:
 
-- **Field Type:** Dropdown select
-- **Required:** Yes
-- **Options:**
+- Field Type: Dropdown select
+- Required: Yes
+- Options:
   - Online Workshop
   - Hackathon
   - Conference
   - One-day Workshop
-- **Description:** Select the category that best describes your event
+- Description: Select the category that best describes your event
 
-### Step 3: Validate Your Input
+ Step 3: Validate Your Input
 
 The system performs the following validations:
 
-1. **Event Name Validation:**
+1. Event Name Validation:
    - Only alphanumeric characters and spaces are allowed
    - Special characters will trigger an error
 
-2. **Date Range Validation:**
+2. Date Range Validation:
    - Registration end date must be after registration start date
    - Event date must be on or after registration start date
 
-3. **Required Fields:**
+3. Required Fields:
    - All fields must be filled out
 
-### Step 4: Save Event Configuration
+ Step 4: Save Event Configuration
 
 1. Review all entered information
-2. Click the **Save Event Configuration** button
+2. Click the Save Event Configuration button
 3. You will see a success message: "Event configuration has been saved successfully."
 
-### Example: Creating a Workshop Event
+ Example: Creating a Workshop Event
 
 ```
 Event Registration Start Date: 2026-03-01
@@ -130,7 +131,7 @@ Category: Online Workshop
 
 After saving, this event will be available for registration from March 1 to March 15, 2026.
 
-### Creating Multiple Events
+Creating Multiple Events:
 
 You can create multiple events with:
 - Same category but different dates
@@ -141,20 +142,20 @@ The registration form will dynamically show available options based on active ev
 
 ---
 
-## Registering for an Event
+Registering for an Event:
 
-### Prerequisites
+Prerequisites:
 
 - An active event (current date is between registration start and end dates)
 - Valid email address
 - User account with "access event registration form" permission (or anonymous access if configured)
 
-### Step 1: Access Registration Form
+ Step 1: Access Registration Form
 
 1. Navigate to: `http://localhost/event_registration/event-registration`
 2. Or click on the "Event Registration" link in the site menu
 
-### Step 2: Check for Active Events
+ Step 2: Check for Active Events
 
 If no events are currently open for registration, you will see:
 
@@ -167,100 +168,100 @@ This means:
 - Current date is before all event registration start dates, OR
 - Current date is after all event registration end dates
 
-### Step 3: Fill Out Registration Form
+ Step 3: Fill Out Registration Form
 
 If active events exist, you will see the registration form with the following fields:
 
-#### Full Name
+Full Name:
 
-- **Field Type:** Text field
-- **Required:** Yes
-- **Max Length:** 255 characters
-- **Example:** "John Smith"
-- **Validation:** Only letters, numbers, and spaces allowed
+- Field Type: Text field
+- Required: Yes
+- Max Length: 255 characters
+- Example: "John Smith"
+- Validation: Only letters, numbers, and spaces allowed
 
-#### Email Address
+Email Address:
 
-- **Field Type:** Email field
-- **Required:** Yes
-- **Max Length:** 255 characters
-- **Example:** "john.smith@example.com"
-- **Validation:** Must be a valid email format
-- **Duplicate Check:** System checks if this email is already registered for the selected event
+- Field Type: Email field
+- Required: Yes
+- Max Length: 255 characters
+- Example: "john.smith@example.com"
+- Validation: Must be a valid email format
+- Duplicate Check: System checks if this email is already registered for the selected event
 
-#### College Name
+College Name:
 
-- **Field Type:** Text field
-- **Required:** Yes
-- **Max Length:** 255 characters
-- **Example:** "University of California"
-- **Validation:** Only letters, numbers, and spaces allowed
+- Field Type: Text field
+- Required: Yes
+- Max Length: 255 characters
+- Example: "University of California"
+- Validation: Only letters, numbers, and spaces allowed
 
-#### Department
+Department:
 
-- **Field Type:** Text field
-- **Required:** Yes
-- **Max Length:** 255 characters
-- **Example:** "Computer Science"
-- **Validation:** Only letters, numbers, and spaces allowed
+- Field Type: Text field
+- Required: Yes
+- Max Length: 255 characters
+- Example: "Computer Science"
+- Validation: Only letters, numbers, and spaces allowed
 
-#### Category of the Event
+Category of the Event:
 
-- **Field Type:** Dropdown select
-- **Required:** Yes
-- **Options:** Dynamically populated based on active events
-- **Example:** "Online Workshop"
+- Field Type: Dropdown select
+- Required: Yes
+- Options: Dynamically populated based on active events
+- Example: "Online Workshop"
 
-**Note:** Only categories with active events will appear in the dropdown.
+Note: Only categories with active events will appear in the dropdown.
 
-#### Event Date
+Event Date:
 
-- **Field Type:** Dropdown select
-- **Required:** Yes
-- **Options:** Dynamically populated based on selected category
-- **Behavior:** This field updates automatically when you select a category
+- Field Type: Dropdown select
+- Required: Yes
+- Options: Dynamically populated based on selected category
+- Behavior: This field updates automatically when you select a category
 
-**How it works:**
+How it works:
 1. Select a category
 2. The Event Date dropdown will update to show only dates for events in that category
 3. Dates are displayed in readable format (e.g., "March 20, 2026")
 
-#### Event Name
+Event Name:
 
-- **Field Type:** Dropdown select
-- **Required:** Yes
-- **Options:** Dynamically populated based on selected category and date
-- **Behavior:** This field updates automatically when you select both category and date
+- Field Type: Dropdown select
+- Required: Yes
+- Options: Dynamically populated based on selected category and date
+- Behavior: This field updates automatically when you select both category and date
 
-**How it works:**
+How it works:
 1. Select a category
 2. Select an event date
 3. The Event Name dropdown will update to show only events matching both criteria
 
-### Step 4: Submit Registration
+ Step 4: Submit Registration
 
 1. Review all entered information
-2. Click the **Register** button
+2. Click the Register button
 3. The system will validate your submission
 
-### Step 5: Confirmation
+ Step 5: Confirmation
 
 Upon successful registration:
 
-1. **Success Message:** You will see a message on the screen:
+1. Success Message: You will see a message on the screen:
    ```
    Thank you for registering! A confirmation email has been sent to your-email@example.com.
    ```
 
-2. **Confirmation Email:** You will receive an email containing:
+2. Confirmation Email: You will receive an email containing:
    - Your registration details
    - Event information
    - Event date and time
    - Contact information
 
-3. **Admin Notification:** If configured, the administrator will receive a notification email about your registration.
+3. Admin Notification: If configured, the administrator will receive a notification email about your registration.
 
-### Example Registration Flow
+Example Registration Flow:
 
 ```
 Step 1: Enter "John Smith" in Full Name
@@ -276,75 +277,75 @@ Step 8: Click "Register" button
 Step 9: See success message and check email
 ```
 
-### Validation Errors
+Validation Errors:
 
 You may encounter the following errors:
 
-#### Duplicate Registration
+Duplicate Registration:
 
-**Error:** "You have already registered for this event on the selected date."
+Error: "You have already registered for this event on the selected date."
 
-**Cause:** You have previously registered with the same email address for the same event date.
+Cause: You have previously registered with the same email address for the same event date.
 
-**Solution:** Use a different email address or contact the administrator if this is an error.
+Solution: Use a different email address or contact the administrator if this is an error.
 
-#### Invalid Email Format
+Invalid Email Format:
 
-**Error:** "Please enter a valid email address."
+Error: "Please enter a valid email address."
 
-**Cause:** The email address format is incorrect.
+Cause: The email address format is incorrect.
 
-**Solution:** Enter a valid email address (e.g., user@example.com).
+Solution: Enter a valid email address (e.g., user@example.com).
 
-#### Special Characters in Text Fields
+Special Characters in Text Fields:
 
-**Error:** "Full name should not contain special characters."
+Error: "Full name should not contain special characters."
 
-**Cause:** You entered special characters in a text field.
+Cause: You entered special characters in a text field.
 
-**Solution:** Use only letters, numbers, and spaces.
+Solution: Use only letters, numbers, and spaces.
 
-#### Registration Period Closed
+Registration Period Closed:
 
-**Error:** "Registration for this event is currently closed."
+Error: "Registration for this event is currently closed."
 
-**Cause:** The registration period has ended or not yet started.
+Cause: The registration period has ended or not yet started.
 
-**Solution:** Wait until the registration period opens or contact the administrator.
+Solution: Wait until the registration period opens or contact the administrator.
 
 ---
 
-## Viewing Registrations
+Viewing Registrations:
 
-### Prerequisites
+Prerequisites:
 
 - Administrator account with "administer event registration" permission
 
-### Accessing Registration List
+Accessing Registration List:
 
 1. Log in as administrator
-2. Navigate to: **Administration** > **Event Registration** > **Event Registrations**
+2. Navigate to: Administration > Event Registration > Event Registrations
 3. Or access directly: `http://localhost/event_registration/admin/event-registration/list`
 
-### Registration List View
+Registration List View:
 
 The registration list displays all registrations in a table format with the following columns:
 
-- **ID:** Unique registration identifier
-- **Full Name:** Participant's name
-- **Email:** Participant's email address
-- **College Name:** Participant's college
-- **Department:** Participant's department
-- **Event Date:** Date of the event (formatted as readable date)
-- **Created:** Timestamp when registration was submitted
+- ID: Unique registration identifier
+- Full Name: Participant's name
+- Email: Participant's email address
+- College Name: Participant's college
+- Department: Participant's department
+- Event Date: Date of the event (formatted as readable date)
+- Created: Timestamp when registration was submitted
 
-### Table Features
+Table Features:
 
-- **Sortable Columns:** Click on column headers to sort
-- **Pagination:** If there are many registrations, they will be paginated
-- **Search:** Use browser's find function (Ctrl+F) to search within the page
+- Sortable Columns: Click on column headers to sort
+- Pagination: If there are many registrations, they will be paginated
+- Search: Use browser's find function (Ctrl+F) to search within the page
 
-### Filtering Registrations
+Filtering Registrations:
 
 Currently, the list shows all registrations. To filter by specific criteria:
 
@@ -353,19 +354,19 @@ Currently, the list shows all registrations. To filter by specific criteria:
 
 ---
 
-## Exporting Registration Data
+Exporting Registration Data:
 
-### Prerequisites
+Prerequisites:
 
 - Administrator account with "administer event registration" permission
 
-### Exporting to CSV
+Exporting to CSV:
 
 1. Navigate to the registration list: `http://localhost/event_registration/admin/event-registration/list`
-2. Click the **Export to CSV** button
+2. Click the Export to CSV button
 3. Your browser will download a file named: `event_registrations_YYYY-MM-DD.csv`
 
-### CSV File Contents
+CSV File Contents:
 
 The exported CSV file contains the following columns:
 
@@ -373,14 +374,14 @@ The exported CSV file contains the following columns:
 Full Name, Email, College Name, Department, Category, Event Date, Created
 ```
 
-**Example:**
+Example:
 ```csv
 Full Name,Email,College Name,Department,Category,Event Date,Created
 John Smith,john@example.com,UC Berkeley,Computer Science,Online Workshop,March 20 2026,2026-03-01 10:30:00
 Jane Doe,jane@example.com,Stanford,Engineering,Hackathon,April 15 2026,2026-03-02 14:45:00
 ```
 
-### Using CSV Data
+Using CSV Data:
 
 You can open the CSV file in:
 - Microsoft Excel
@@ -388,7 +389,7 @@ You can open the CSV file in:
 - LibreOffice Calc
 - Any text editor
 
-**Common Uses:**
+Common Uses:
 - Create mailing lists
 - Generate attendance sheets
 - Analyze registration trends
@@ -397,74 +398,74 @@ You can open the CSV file in:
 
 ---
 
-## Configuring Email Notifications
+Configuring Email Notifications:
 
-### Prerequisites
+Prerequisites:
 
 - Administrator account with "administer event registration" permission
 - SMTP configured (see DRUPAL_SMTP_CONFIGURATION.md)
 
-### Accessing Email Settings
+Accessing Email Settings:
 
 1. Log in as administrator
-2. Navigate to: **Configuration** > **Event Registration** > **Event Registration Settings**
+2. Navigate to: Configuration > Event Registration > Event Registration Settings
 3. Or access directly: `http://localhost/event_registration/admin/config/event-registration/settings`
 
-### Configuration Options
+Configuration Options:
 
-#### Admin Notification Email
+Admin Notification Email:
 
-- **Field Type:** Email field
-- **Required:** Yes
-- **Description:** Email address to receive registration notifications
-- **Example:** "admin@example.com"
-- **Validation:** Must be a valid email format
+- Field Type: Email field
+- Required: Yes
+- Description: Email address to receive registration notifications
+- Example: "admin@example.com"
+- Validation: Must be a valid email format
 
-**Purpose:** This email address will receive a notification every time someone registers for an event.
+Purpose: This email address will receive a notification every time someone registers for an event.
 
-#### Enable Admin Notifications
+Enable Admin Notifications:
 
-- **Field Type:** Checkbox
-- **Description:** Check this box to receive email notifications for new registrations
-- **Default:** Unchecked
+- Field Type: Checkbox
+- Description: Check this box to receive email notifications for new registrations
+- Default: Unchecked
 
-**When Enabled:**
+When Enabled:
 - Administrator receives an email for each new registration
 - Email contains all registration details
 - Email includes a link to view all registrations
 
-**When Disabled:**
+When Disabled:
 - No admin notifications are sent
 - Users still receive confirmation emails
 - Registrations are still saved in the database
 
-### Email Templates
+Email Templates:
 
-#### User Confirmation Email
+User Confirmation Email:
 
 Sent to the user who registers for an event.
 
-**Subject:** Event Registration Confirmation
+Subject: Event Registration Confirmation
 
-**Content:**
+Content:
 - Greeting with user's name
 - Confirmation message
 - Registration details (name, email, college, department, event date)
 - Thank you message
 - Contact information
 
-#### Admin Notification Email
+Admin Notification Email:
 
 Sent to the administrator when a new registration is submitted.
 
-**Subject:** New Event Registration: [User's Name]
+Subject: New Event Registration: [User's Name]
 
-**Content:**
+Content:
 - Notification of new registration
 - All registration details
 - Link to view all registrations
 
-### Testing Email Configuration
+Testing Email Configuration:
 
 1. Configure SMTP settings (see DRUPAL_SMTP_CONFIGURATION.md)
 2. Set admin notification email
@@ -474,147 +475,147 @@ Sent to the administrator when a new registration is submitted.
 
 ---
 
-## Troubleshooting
+Troubleshooting:
 
-### Problem: Cannot Access Event Configuration Form
+ Problem: Cannot Access Event Configuration Form
 
-**Symptoms:**
+Symptoms:
 - "Access denied" message when trying to access configuration form
 - Configuration menu item not visible
 
-**Cause:** User account does not have required permissions
+Cause: User account does not have required permissions
 
-**Solution:**
+Solution:
 1. Log in as administrator (user 1)
-2. Navigate to: **People** > **Permissions**
+2. Navigate to: People > Permissions
 3. Find "Event Registration" section
 4. Ensure appropriate roles have "administer event registration" permission
 5. Save permissions
 6. Log out and log back in
 
-### Problem: No Events Showing in Registration Form
+Problem: No Events Showing in Registration Form
 
-**Symptoms:**
+Symptoms:
 - Message: "No events are currently open for registration"
 - Registration form fields not visible
 
-**Possible Causes and Solutions:**
+Possible Causes and Solutions:
 
-**Cause 1: No events created**
+Cause 1: No events created
 - Solution: Create at least one event using the event configuration form
 
-**Cause 2: Registration period not active**
+Cause 2: Registration period not active
 - Solution: Check event dates and ensure current date is between registration start and end dates
 
-**Cause 3: All events have passed**
+Cause 3: All events have passed
 - Solution: Create new events with future dates
 
-**Verification:**
+Verification:
 1. Go to database and check `event_registration_config` table
 2. Verify records exist
 3. Check `registration_start_date` and `registration_end_date` timestamps
 4. Compare with current timestamp
 
-### Problem: Duplicate Registration Error
+ Problem: Duplicate Registration Error
 
-**Symptoms:**
+Symptoms:
 - Error: "You have already registered for this event on the selected date"
 - Cannot submit registration form
 
-**Cause:** Same email address already registered for the same event date
+Cause: Same email address already registered for the same event date
 
-**Solutions:**
+Solutions:
 
-**Solution 1: Use different email**
+Solution 1: Use different email
 - Register with a different email address
 
-**Solution 2: Contact administrator**
+Solution 2: Contact administrator
 - If this is an error, ask administrator to remove duplicate entry
 
-**Solution 3: Administrator removes duplicate**
+Solution 3: Administrator removes duplicate
 1. Access registration list
 2. Find duplicate entry in database
 3. Delete duplicate record manually from `event_registration_data` table
 
-### Problem: Event Date or Event Name Dropdown Not Updating
+Problem: Event Date or Event Name Dropdown Not Updating
 
-**Symptoms:**
+Symptoms:
 - Selecting category does not update event date dropdown
 - Selecting event date does not update event name dropdown
 
-**Possible Causes and Solutions:**
+Possible Causes and Solutions:
 
-**Cause 1: JavaScript not loaded**
+Cause 1: JavaScript not loaded
 - Solution: Clear browser cache and reload page
 - Solution: Check browser console for JavaScript errors
 
-**Cause 2: AJAX not working**
+Cause 2: AJAX not working
 - Solution: Ensure Drupal AJAX library is loaded
 - Solution: Check that `event_registration/event_registration_styles` library is attached
 
-**Cause 3: No matching events**
+Cause 3: No matching events
 - Solution: Verify events exist for the selected category/date combination
 
-**Verification:**
+Verification:
 1. Open browser developer tools (F12)
 2. Go to Console tab
 3. Look for JavaScript errors
 4. Check Network tab for AJAX requests
 
-### Problem: Confirmation Email Not Received
+Problem: Confirmation Email Not Received
 
-**Symptoms:**
+Symptoms:
 - Registration successful but no email received
 - Admin notification not received
 
-**Possible Causes and Solutions:**
+Possible Causes and Solutions:
 
-**Cause 1: SMTP not configured**
+Cause 1: SMTP not configured
 - Solution: Configure SMTP settings (see DRUPAL_SMTP_CONFIGURATION.md)
 - Solution: Test PHP mail() function
 
-**Cause 2: Email in spam folder**
+Cause 2: Email in spam folder
 - Solution: Check spam/junk folder
 - Solution: Add sender email to safe senders list
 
-**Cause 3: Invalid email address**
+Cause 3: Invalid email address
 - Solution: Verify email address is correct
 - Solution: Try with different email address
 
-**Cause 4: Email service not working**
+Cause 4: Email service not working
 - Solution: Check Drupal logs at `/admin/reports/dblog`
 - Solution: Filter by "mail" type
 - Solution: Check for error messages
 
-**Verification:**
+Verification:
 ```bash
-# Check mail logs
+ Check mail logs
 php vendor/bin/drush watchdog:show --type=mail --count=10
 
-# Test PHP mail
+ Test PHP mail
 php -r "mail('test@example.com', 'Test', 'Test message');"
 ```
 
-### Problem: Special Characters Error
+Problem: Special Characters Error
 
-**Symptoms:**
+Symptoms:
 - Error: "Full name should not contain special characters"
 - Cannot submit form with certain names
 
-**Cause:** Validation only allows alphanumeric characters and spaces
+Cause: Validation only allows alphanumeric characters and spaces
 
-**Solutions:**
+Solutions:
 
-**Solution 1: Remove special characters**
+Solution 1: Remove special characters
 - Use only letters, numbers, and spaces
 - Example: Instead of "O'Brien", use "OBrien"
 
-**Solution 2: Administrator modifies validation**
+Solution 2: Administrator modifies validation
 - Edit `src/Form/EventRegistrationForm.php`
 - Modify regex pattern in `validateForm()` method
 - Allow additional characters as needed
 
-**Example modification:**
+Example modification:
 ```php
 // Current pattern (alphanumeric and spaces only)
 if (!preg_match('/^[a-zA-Z0-9\s]+$/', $value)) {
@@ -623,94 +624,94 @@ if (!preg_match('/^[a-zA-Z0-9\s]+$/', $value)) {
 if (!preg_match('/^[a-zA-Z0-9\s\'-]+$/', $value)) {
 ```
 
-### Problem: Registration Period Validation Error
+ Problem: Registration Period Validation Error
 
-**Symptoms:**
+Symptoms:
 - Error: "Registration for this event is currently closed"
 - Form shows event but cannot register
 
-**Cause:** Current time is outside registration period
+Cause: Current time is outside registration period
 
-**Solutions:**
+Solutions:
 
-**Solution 1: Wait for registration to open**
+Solution 1: Wait for registration to open
 - Check registration start date
 - Wait until that date/time
 
-**Solution 2: Administrator extends registration period**
+Solution 2: Administrator extends registration period
 - Access event configuration
 - Update registration end date
 - Note: Currently no edit interface, must update database directly
 
-**Database Update:**
+Database Update:
 ```sql
 UPDATE event_registration_config
 SET registration_end_date = UNIX_TIMESTAMP('2026-12-31')
 WHERE id = [event_id];
 ```
 
-### Problem: CSV Export Not Working
+Problem: CSV Export Not Working:
 
-**Symptoms:**
+Symptoms:
 - Export button does nothing
 - CSV file not downloaded
 
-**Possible Causes and Solutions:**
+Possible Causes and Solutions:
 
-**Cause 1: Browser blocking download**
+Cause 1: Browser blocking download
 - Solution: Check browser download settings
 - Solution: Allow downloads from the site
 
-**Cause 2: No registrations to export**
+Cause 2: No registrations to export
 - Solution: Verify registrations exist in database
 - Solution: Check registration list shows data
 
-**Cause 3: PHP memory limit**
+Cause 3: PHP memory limit
 - Solution: Increase PHP memory limit in php.ini
 - Solution: Export smaller date ranges
 
-**Verification:**
+Verification:
 1. Check browser console for errors
 2. Check Drupal logs for PHP errors
 3. Verify file permissions on temporary directory
 
 ---
 
-## Additional Information
+Additional Information:
 
-### Database Tables
+Database Tables:
 
 The module uses two main database tables:
 
-**event_registration_config**
+event_registration_config
 - Stores event configuration
 - Fields: id, registration_start_date, registration_end_date, event_date, event_name, category, created
 
-**event_registration_data**
+event_registration_data
 - Stores registration submissions
 - Fields: id, full_name, email, college_name, department, category, event_date, event_id, created
 
-### Permissions
+Permissions:
 
 The module defines two permissions:
 
-**administer event registration**
+administer event registration
 - Create events
 - View all registrations
 - Export registration data
 - Configure email settings
 
-**access event registration form**
+access event registration form
 - View registration form
 - Submit registrations
 
-### URL Routes
+URL Routes:
 
-**Public URLs:**
-- Registration form: `/event-registration`
+Public URLs:
+- Registration form: /event-registration
 
-**Admin URLs:**
-- Event configuration: `/admin/config/event-registration/config`
-- Registration settings: `/admin/config/event-registration/settings`
-- View registrations: `/admin/event-registration/list`
-- Export CSV: `/admin/event-registration/export`
+Admin URLs:
+- Event configuration: /admin/config/event-registration/config
+- Registration settings: /admin/config/event-registration/settings
+- View registrations: /admin/event-registration/list
+- Export CSV: /admin/event-registration/export
