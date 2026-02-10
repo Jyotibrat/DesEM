@@ -24,6 +24,11 @@ Configure/
 │       │   └── README.md 
 │       └── Text Files/
 │           └── MySQL_Config_without_XAMPP.txt 
+├── SMTP/
+│   ├── README Files/
+│   │   └── README.md
+│   └── Text Files/
+│       └── SMTP_Configuration.txt
 ├── XAMPP/
 │   ├── README Files/
 │   │   └── README.md              
@@ -72,11 +77,18 @@ Contains *`MySQL`* configuration instructions with two variants:
 Each variant includes both *`Markdown`* and *`text`* format versions.
 
 ### XAMPP/
-Contains configuration instructions for setting up and configuring *`XAMPP`*, which includes the Apache web server and MySQL database.
+Contains configuration instructions for setting up and configuring *`XAMPP`*, which includes the Apache web server and MySQL database:
 - **README Files/**: *`XAMPP`* configuration guide in Markdown format.
 - **Text Files/**: *`XAMPP`* configuration guide in plain text format.
+
+### SMTP/
+Contains the configuration steps for setting up SMTP Server:
+- **README Files/**: *`SMTP`* configuration guide in Markdown format.
+- **Text Files/**: *`SMTP`* configuration guide in plain text format.
 
 ### Web-App/
 Contains configuration instructions for setting up and configuring the *`Web-App`* in local machine.
 - **client/**: It contains the configuration of `Supabase` on the `client` side.
 - **server/**: It contains the configuration of `Supabase`, `SMTP` and `MongoDB Compass` on the `server` side.
+
+---

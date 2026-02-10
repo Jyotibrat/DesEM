@@ -45,11 +45,15 @@ A comprehensive *`Drupal 10-based`* Event Management and Registration System des
 
 ```
 DesEM/
+├── README.md
 ├── composer.json
 ├── composer.lock
-├── README.md
+├── .gitattributes
+├── .gitignore
+├── LICENSE
 ├── modules/
 ├── docs/
+├── database/
 ├── archive/
 ├── apps/
 └── .github/
@@ -112,6 +116,8 @@ All configuration guides and documentation are available in the configure direct
 2. View all event registrations
 3. Filter and search registrations
 4. Export data to CSV format
+
+Refer to the [*docs/Usage*](https://github.com/Jyotibrat/DesEM/tree/main/Docs/Usage) directory
 
 ---
 

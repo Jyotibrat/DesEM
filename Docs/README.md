@@ -20,7 +20,15 @@ Configuration guidelines for the *`Drupal custom module`*:
 
 ### Assets
 
-Contains all the screenshots for the testing of the custom module of Drupal.
+This directory contains all the screenshots for the testing of the custom module of Drupal.
+
+### Module
+
+This directory contains all the explanation of codes.
+
+### Usage
+
+This directory contains the guidelines how to use the `Custom Module` of `Drupal 10`.
 
 All documentation files are provided in both Markdown and Text formats for easy reference.
 
